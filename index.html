@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <style>
+    .bg-1 { 
+        background-color: #1abc9c; /* Green */
+        color: #ffffff;
+    }
+    </style>
+  </head>
+  <body class = "badge-light">  
+    <div class="jumbotron bg-1 text-center">
+        <h1>Kelli Ward Event Planning</h1>
+        <img src="Kelli.jpg" class="rounded-circle" width="200" height="200" alt="Kelli">
+    </div>
+    
+    <form>
+        <div class = "pl-4 pr-4 text-center font-weight-bold">
+            <div class="form-group">
+                <label>Event Summary</label>
+                <input type="textarea" class="form-control" id="eventSummary" rows="3">
+            </div>
+            <div class="form-group">
+                <label>Expected Attendance</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label>Contact Number</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label>Arrival</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col">
+                                <label>Departure</label>
+                                <input type="text" class="form-control">
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                        <div class="col">
+                            <label> Speaking Hours</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label>Minutes</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label>Kelli Ward Introduction</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label>Event Program</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Press</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Other VIPs</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                    <div class="row">
+                        <label for="exampleFormControlTextarea1">Surrogate Available</label>
+                            <div class="col">
+                                <input class="form-check-input" type="checkbox" id="exampleFormControlTextarea4">
+                                <label class="form-check-label" for="exampleFormControlTextarea4">Yes</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-check-input" type="checkbox" id="exampleFormControlTextarea5">
+                                <label class="form-check-label" for="exampleFormControlTextarea5">No</label>   
+                            </div>
+                    </div>
+            <div class="form-group">
+                <label>Other AZGOP attending</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="exampleFormControlTextarea1">Driver</label>
+                        <div class="col">
+                            <input class="form-check-input" type="checkbox" id="exampleFormControlTextarea2">
+                            <label class="form-check-label" for="exampleFormControlTextarea2">Yes</label>
+                        </div>
+                        <div class="col">
+                            <input class="form-check-input" type="checkbox" id="exampleFormControlTextarea3">
+                            <label class="form-check-label" for="exampleFormControlTextarea3">No</label>   
+                        </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Comments</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="col-md-12 text-center"> 
+            <button onclick = "myFunction()" class="btn btn-lg btn-primary btn-block font-weight-bold">Submit</button>
+        </div>
+    </form>
+    <script>
+        function myFunction(){
+            var eventSummary = "Event Summary\n"
+            eventSummary = document.getElementById("eventSummary");
+            //eventSummary += document.getElementById("eventSummary");
+            eventSummary.select();
+            document.execCommand("copy");
+        }
+    </script>
+  </body>
+</html>
